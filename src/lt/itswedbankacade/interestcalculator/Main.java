@@ -23,12 +23,13 @@ public class Main {
 
         //Validation
         Scanner scanner = new Scanner(System.in);
-        //This way too complicated than it needs to be. It would be enough to validate fields in separate blocks instead of nesting.
+        //This is way too complicated than it needs to be. It would be enough to validate fields in separate blocks instead of
+        // nesting depending of the outcome of validation. You won't be moving forward until a valid input is entered.
         while (true) {
 
             //"printf" should be used only when you want to format something. Here you should use "print" instead.
             System.out.printf("Amount: ");
-            //Amount is not protected from invalid number input (entering letters instead of number)
+            //Amount is not protected from invalid number input (entering letters instead of a number).
             double amount = scanner.nextDouble();
             if (amount <= 0) System.out.println("Invalid input! Try again!");
             else {
@@ -46,7 +47,7 @@ public class Main {
                             // 2. Read input: "double rate = scanner.nextDouble();"
                             // 3. Validate input: ...
                             // 4. Expand array by 1 element: "interestRates = Arrays.copyOf(interestRates, interestRates.length + 1);"
-                            // 5. Add validated input at the end of expanded array: "interestRates[interestRates.length - 1] = rate;"
+                            // 5. Add validated input at the end of a expanded array: "interestRates[interestRates.length - 1] = rate;"
                             // 6. Repeat
                             double[] newArr = new double[10000];
                             double[] interestRates;
@@ -171,7 +172,7 @@ public class Main {
                 return 4;
             case 'H':
                 return 2;
-            //"case 'Y':" and "default:" returns same result, so you can either remove last "return" and put "default:" above
+            //"case 'Y':" and "default:" returns the same result, so you can either remove last "return" and put "default:" above
             // "case 'Y':", or remove "case 'Y':" block altogether.
             case 'Y':
                 return 1;
